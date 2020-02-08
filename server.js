@@ -2,7 +2,7 @@ const express = require('express');
 const logger = require('morgan');
 const clientes = require('./api/rotas/rotasClientes');
 const bodyParser = require('body-parser');
-const mongoose = require('../desafioapi/api/config/database');
+const mongoose = require('../desafio-luizalabs-nodejs/api/config/database');
 var jwt = require('jsonwebtoken');
 const app = express();
 app.set('secretKey', 'nodeRestApi'); //Token JWT
