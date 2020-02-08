@@ -45,8 +45,8 @@ module.exports = {
     },
 
     //Remove um cliente passando seu email como requerimento
-    removerUsuario: function(req, res, next) {
-        clientesModel.removerUsuario(req.params.email, function(err, userInfo) {
+    removeCliente: function(req, res, next) {
+        clientesModel.removeCliente(req.params.email, function(err, userInfo) {
             if (err)
                 next(err);
             else {
