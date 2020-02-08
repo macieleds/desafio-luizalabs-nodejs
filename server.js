@@ -1,10 +1,12 @@
 const express = require('express');
 const logger = require('morgan');
 const clientes = require('./api/rotas/rotasClientes');
+const produtos = require('./api/rotas/rotasProdutos');
 const bodyParser = require('body-parser');
 const mongoose = require('../desafio-luizalabs-nodejs/api/config/database');
 var jwt = require('jsonwebtoken');
 const app = express();
+
 app.set('secretKey', 'nodeRestApi'); //Token JWT
 
 //Conexão com o banco de dados - MongoDB
@@ -17,11 +19,12 @@ app.get('/', function(req, res) {
     res.json({ "Desafio Luizalabs": "API em NodeJS" });
 });
 
-//Rota aberta
+//Rota pública
 app.use('/clientes', clientes);
 
 //Rota privada
-app.use('/clientes', validateUser, clientes);
+app.use('/produtos', validateUser, produtos);
+
 app.get('/favicon.ico', function(req, res) {
     res.sendStatus(204);
 });

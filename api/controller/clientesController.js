@@ -18,7 +18,7 @@ module.exports = {
     },
     //Autentica o usuário e gera uma JSONWebToken
     autenticar: function(req, res, next) {
-        clientesModel.findOne({ nome: req.body.nome, email: req.body.email }, function(err, userInfo) {
+        clientesModel.findOne({ email: req.body.email }, function(err, userInfo) {
             if (err) {
                 next(err);
             } else {
