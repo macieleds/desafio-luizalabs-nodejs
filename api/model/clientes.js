@@ -16,7 +16,7 @@ const clientesSchema = new Schema({
     }
 });
 
-// hash user password before saving into database
+// hash no email de cliente antes de salvar no banco de dados
 clientesSchema.pre('save', function(next) {
     this.email = bcrypt.hashSync(this.email, saltRounds);
     next();

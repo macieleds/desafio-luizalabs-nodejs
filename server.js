@@ -23,13 +23,13 @@ app.get('/', function(req, res) {
 app.use('/clientes', clientes);
 
 //Rota privada
-app.use('/produtos', validateUser, produtos);
+app.use('/produtos', validaUsuario, produtos);
 
 app.get('/favicon.ico', function(req, res) {
     res.sendStatus(204);
 });
 
-function validateUser(req, res, next) {
+function validaUsuario(req, res, next) {
     jwt.verify(req.headers['x-access-token'], req.app.get('secretKey'), function(err, decoded) {
         if (err) {
             res.json({ status: "error", message: err.message, data: null });

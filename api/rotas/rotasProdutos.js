@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const movieController = require('../controller/produtosController');
-router.get('/', movieController.getAll);
-router.post('/', movieController.adicionaProduto);
-router.get('/:produtoId', movieController.getById);
-router.delete('/:produtoId', movieController.deleteById);
+const produtosController = require('../controller/produtosController');
+router.get('/', produtosController.getAll);
+router.post('/', produtosController.adicionaProduto);
+router.get('/:produtoId', produtosController.getById);
+router.delete('/:produtoId', produtosController.deleteById);
 module.exports = router;

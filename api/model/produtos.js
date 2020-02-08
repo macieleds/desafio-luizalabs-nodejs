@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-const MovieSchema = new Schema({
+const produtosSchema = new Schema({
     produtos: [{
         price: {
             type: Number,
@@ -31,4 +31,4 @@ const MovieSchema = new Schema({
         },
     }],
 });
-module.exports = mongoose.model('Movie', MovieSchema)
+module.exports = mongoose.model('produtos', produtosSchema)
