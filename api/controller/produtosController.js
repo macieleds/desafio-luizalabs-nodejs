@@ -36,7 +36,7 @@ module.exports = {
         });
     },
     adicionaProduto: function(req, res, next) {
-        produtosModel.adicionaProduto({ name: req.body.id }, function(err, result) {
+        produtosModel.adicionaProduto({ price: req.body.price, image: req.body.image, brand: req.body.brand, id: req.body.id, title: req.body.title }, function(err, result) {
             if (err)
                 next(err);
             else

@@ -16,6 +16,7 @@ module.exports = {
                     res.json({ status: "success", message: "Cadastro realizado com sucesso.", data: null });
             });
     },
+
     //Autentica o usuário e gera uma JSONWebToken
     autenticar: function(req, res, next) {
         clientesModel.findOne({ nome: req.body.nome }, function(err, userInfo) {
@@ -32,10 +33,11 @@ module.exports = {
         });
     },
 
-    //Consulta um cliente passando seu email como requerimento
+    //Consulta um cliente 
+
     consultaCliente: function(req, res, next) {
         console.log(req.body);
-        clientesModel.consultaCliente(req.params.email, function(err, userInfo) {
+        clientesModel.findById(req.params._id, function(err, clientesInfo) {
             if (err) {
                 next(err);
             } else {
@@ -44,7 +46,7 @@ module.exports = {
         });
     },
 
-    //Remove um cliente passando seu email como requerimento
+    //Remove um cliente 
     removeCliente: function(req, res, next) {
         clientesModel.removeCliente(req.params.email, function(err, userInfo) {
             if (err)

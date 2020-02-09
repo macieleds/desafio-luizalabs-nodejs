@@ -10,7 +10,7 @@ const app = express();
 app.set('secretKey', 'nodeRestApi'); //Token JWT
 
 //Conexão com o banco de dados - MongoDB
-mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection error:'));
+//mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection error:'));
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -24,6 +24,7 @@ app.use('/clientes', clientes);
 
 //Rota privada
 app.use('/produtos', validaUsuario, produtos);
+app.use('/clientes', validaUsuario, clientes);
 
 app.get('/favicon.ico', function(req, res) {
     res.sendStatus(204);
@@ -42,13 +43,15 @@ function validaUsuario(req, res, next) {
 
 }
 
+
+//Tratando erro 404
 app.use(function(req, res, next) {
     let err = new Error('Não encontrado');
     err.status = 404;
     next(err);
 });
 
-
+//Retornando objeto de erro
 app.use(function(err, req, res, next) {
     console.log(err);
 
@@ -57,6 +60,7 @@ app.use(function(err, req, res, next) {
     else
         res.status(500).json({ message: "Internal Server Error" });
 });
+
 app.listen(3000, function() {
     console.log('Servidor ON - http://localhost:3000/');
 });
