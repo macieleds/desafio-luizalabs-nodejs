@@ -10,7 +10,7 @@ const app = express();
 app.set('secretKey', 'nodeRestApi'); //Token JWT
 
 //Conexão com o banco de dados - MongoDB
-//mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection error:'));
+mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection error:'));
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -20,7 +20,7 @@ app.get('/', function(req, res) {
 });
 
 //Rota pública
-app.use('/clientes', clientes);
+app.use('/cliente', clientes);
 
 //Rota privada
 app.use('/produtos', validaUsuario, produtos);

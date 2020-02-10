@@ -36,12 +36,27 @@ module.exports = {
     //Consulta um cliente 
 
     consultaCliente: function(req, res, next) {
-        console.log(req.body);
+
         clientesModel.findById(req.params._id, function(err, clientesInfo) {
             if (err) {
                 next(err);
             } else {
                 res.json({ status: "success", message: "Cliente Encontrado", data: { clientes: clientesInfo } });
+            }
+        });
+    },
+
+    getAll: function(req, res, next) {
+        let dadosUsuario = [];
+        clientesModel.find({}, function(err, movies) {
+            if (err) {
+                next(err);
+            } else {
+                for (let cliente of clientes) {
+                    dadosUsuario.push({ id: cliente._id, nome: cliente.nome, email: cliente.email });
+                }
+                res.json({ status: "success", message: "Movies list found!!!", data: { movies: dadosUsuario } });
+
             }
         });
     },
