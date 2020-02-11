@@ -13,12 +13,17 @@ const clientesSchema = new Schema({
         type: String,
         trim: true,
         required: true,
+    },
+    password: {
+        type: String,
+        trim: true,
+        required: true
     }
 });
 
 // hash no email de cliente antes de salvar no banco de dados
 clientesSchema.pre('save', function(next) {
-    this.email = bcrypt.hashSync(this.email, saltRounds);
+    this.password = bcrypt.hashSync(this.password, saltRounds);
     next();
 });
 

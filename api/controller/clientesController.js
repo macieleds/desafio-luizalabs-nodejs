@@ -8,7 +8,7 @@ module.exports = {
     //Cria um novo usuário
     criar: function(req, res, next) {
 
-        clientesModel.create({ nome: req.body.nome, email: req.body.email },
+        clientesModel.create({ nome: req.body.nome, email: req.body.email, password: req.body.password },
             function(err, result) {
                 if (err)
                     next(err);
@@ -19,44 +19,38 @@ module.exports = {
 
     //Autentica o usuário e gera uma JSONWebToken
     autenticar: function(req, res, next) {
-        clientesModel.findOne({ nome: req.body.nome }, function(err, userInfo) {
+        clientesModel.findOne({ email: req.body.email }, function(err, userInfo) {
             if (err) {
                 next(err);
             } else {
-                if (bcrypt.compareSync(req.body.email, userInfo.email)) {
+                if (bcrypt.compareSync(req.body.password, userInfo.password)) {
                     const token = jwt.sign({ id: userInfo._id }, req.app.get('secretKey'), { expiresIn: '1h' });
                     res.json({ status: "success", message: "Usuário autenticado.", data: { clientes: userInfo, token: token } });
                 } else {
-                    res.json({ status: "error", message: "E-mail inválido", data: null });
+                    res.json({ status: "error", message: "Dados inválidos.", data: null });
                 }
             }
         });
     },
 
-    //Consulta um cliente 
-
+    //Consulta cliente pelo ID gerado
     consultaCliente: function(req, res, next) {
-
-        clientesModel.findById(req.params._id, function(err, clientesInfo) {
+        console.log(req.body);
+        clientesModel.findById(req.params.clienteId, function(err, clientesInfo) {
             if (err) {
                 next(err);
             } else {
-                res.json({ status: "success", message: "Cliente Encontrado", data: { clientes: clientesInfo } });
+                res.json({ status: "success", message: "Usuário encontrado!", data: { clientes: clientesInfo } });
             }
         });
     },
 
-    getAll: function(req, res, next) {
-        let dadosUsuario = [];
-        clientesModel.find({}, function(err, movies) {
-            if (err) {
+    updateById: function(req, res, next) {
+        clientesModel.findByIdAndUpdate(req.params.movieId, { nome: req.body.nome, email: req.body.email, password: req.body.password }, function(err, movieInfo) {
+            if (err)
                 next(err);
-            } else {
-                for (let cliente of clientes) {
-                    dadosUsuario.push({ id: cliente._id, nome: cliente.nome, email: cliente.email });
-                }
-                res.json({ status: "success", message: "Movies list found!!!", data: { movies: dadosUsuario } });
-
+            else {
+                res.json({ status: "success", message: "Dados alterados com sucesso!", data: null });
             }
         });
     },

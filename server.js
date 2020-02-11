@@ -22,9 +22,9 @@ app.get('/', function(req, res) {
 //Rota pública
 app.use('/clientes', clientes);
 
+
 //Rota privada
 app.use('/produtos', validaUsuario, produtos);
-//app.use('/clientes', validaUsuario, clientes);
 
 app.get('/favicon.ico', function(req, res) {
     res.sendStatus(204);
