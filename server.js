@@ -53,8 +53,6 @@ app.use(function(req, res, next) {
 
 //Retornando objeto de erro
 app.use(function(err, req, res, next) {
-    console.log(err);
-
     if (err.status === 404)
         res.status(404).json({ message: "Não encontrado" });
     else
