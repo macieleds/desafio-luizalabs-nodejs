@@ -1,3 +1,9 @@
+/**
+ * @author Edison Maciel <maciel.eds@gmail.com>
+ * @file Orquestração das regras de negócio
+ * @since 
+ */
+
 const produtosModel = require('../model/produtos');
 
 

@@ -1,3 +1,9 @@
+/**
+ * @author Edison Maciel <maciel.eds@gmail.com>
+ * @file Configuração do banco de dados e string de conexão.
+ * @since 
+ */
+
 const mongoose = require('mongoose');
 mongoose.set('useUnifiedTopology', true);
 mongoose.set('useNewUrlParser', true);

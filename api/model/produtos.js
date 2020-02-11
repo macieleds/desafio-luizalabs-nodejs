@@ -1,19 +1,14 @@
+/**
+ * @author Edison Maciel <maciel.eds@gmail.com>
+ * @file Esquema que será reproduzido no banco de dados
+ * @since 
+ */
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
 const produtosSchema = new Schema({
-
-    meta: {
-        page_number: {
-            type: Number,
-            trim: true,
-        },
-        page_size: {
-            type: Number,
-            trim: true,
-        },
-    },
     reviewScore: {
         type: String,
         trim: true,

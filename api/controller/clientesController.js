@@ -1,3 +1,9 @@
+/**
+ * @author Edison Maciel <maciel.eds@gmail.com>
+ * @file Orquestração das regras de negócio
+ * @since 
+ */
+
 const clientesModel = require('../model/clientes');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');

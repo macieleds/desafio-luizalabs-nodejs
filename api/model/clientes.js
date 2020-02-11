@@ -1,3 +1,9 @@
+/**
+ * @author Edison Maciel <maciel.eds@gmail.com>
+ * @file Esquema que será reproduzido no banco de dados
+ * @since 
+ */
+
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;

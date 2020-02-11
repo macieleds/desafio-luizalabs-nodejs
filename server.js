@@ -1,3 +1,10 @@
+/**
+ * @author Edison Maciel <maciel.eds@gmail.com>
+ * @file Camada do servidor responsável por gerenciamento de rotas públicas, privadas, conexão com o banco, 
+ * adição de ID ao request e tratamento de erro genérico.
+ * @since 
+ */
+
 const express = require('express');
 const logger = require('morgan');
 const clientes = require('./api/rotas/rotasClientes');
@@ -42,7 +49,6 @@ function validaUsuario(req, res, next) {
     });
 
 }
-
 
 //Tratando erro 404
 app.use(function(req, res, next) {
