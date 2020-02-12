@@ -32,7 +32,7 @@ Para criação do usuário, será feita uma requisição POST em:
 ```sh
 localhost:3000/clientes/cadastrar 
 ```
-Nessa requisição será informado, no corpo da requisição, o nome, email e senha, conforme exemplo abaixo:
+Nessa requisição serão informados, no corpo da requisição, o nome, email e senha, conforme exemplo abaixo:
 
 ![N|Solid](https://i.ibb.co/crywdQs/req-Cadastro.jpg)
 
