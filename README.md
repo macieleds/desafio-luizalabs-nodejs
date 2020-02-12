@@ -42,7 +42,7 @@ Para criação do usuário, será feita uma requisição POST em:
 ```sh
 localhost:3000/clientes/autenticar
 ```
-Nessa requisição serão informados, no corpo da requisição, o nome, email e senha **cadastrados anteriormente**, conforme exemplo abaixo. Essa autenticação irá gerar um token e um ID que serão utilizados posteriormente para as operações na lista de produtos.
+Nessa requisição serão informados, no corpo da requisição, o nome, email e senha **cadastrados anteriormente**, conforme exemplo abaixo. Nssa autenticação o password será criptografado e serão gerados um token e um ID que serão utilizados posteriormente para as operações na lista de produtos.
 
 ![N|Solid](https://i.ibb.co/fN3Y9G5/aut-Usuario.jpg)
 
