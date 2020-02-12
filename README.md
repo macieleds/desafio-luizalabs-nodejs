@@ -24,7 +24,7 @@ O código é totalmente aberto, de uso público e livre para modificações.
 
 A API permite que o usuário faça um CRUD de cadastro de clientes e adicione, consulte e exclua produtos à sua lista de favoritos em sua instância. As operações de produtos favoritos é protegida por autenticação. Logo, é necessário que o usuário crie uma conta e faça a autenticação para realizar essas operações.
 Esse tutorial orienta sobre as funcionalidades da API utilizando o Postman.
-Para subir a aplicação abra o prompt (cmd) ou o terminal de sua preferência, aponte para a pasta onde o projeto está e execute o comando **"nodemon server.js" **(sem as aspas).
+Para subir a aplicação abra o prompt (cmd) ou o terminal de sua preferência, aponte para a pasta onde o projeto está e execute o comando **"nodemon server.js"** (sem as aspas).
 
 ### 1 - Criação de usuário
 
