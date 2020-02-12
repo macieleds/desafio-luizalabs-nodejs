@@ -14,7 +14,7 @@ O código é totalmente aberto, de uso público e livre para modificações.
 
 + NodeJS
 + Express
-+ Mongoose
++ Mongoose (MongoDB)
 + npm - bcrypt (para criptografia de senha)
 + JWT - JSON Web Token (para gerar token de autenticação)
 + body-parser (conversão do body da requisição para o formato JSON)
