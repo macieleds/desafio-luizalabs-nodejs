@@ -1,12 +1,12 @@
 /**
  * @author Edison Maciel <maciel.eds@gmail.com>
  * @file Esquema que será reproduzido no banco de dados
- * @since 
+ * @since 02/2020
  */
 
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-
+const mongoosePaginate = require('mongoose-paginate');
 
 const produtosSchema = new Schema({
     reviewScore: {
@@ -31,7 +31,8 @@ const produtosSchema = new Schema({
     id: {
         type: String,
         trim: true,
-        required: true
+        required: true,
+        unique: true,
     },
     title: {
         type: String,
@@ -40,4 +41,5 @@ const produtosSchema = new Schema({
     }
 });
 
+produtosSchema.plugin(mongoosePaginate);
 module.exports = mongoose.model('produtos', produtosSchema)

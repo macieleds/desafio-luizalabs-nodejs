@@ -2,7 +2,7 @@
  * @author Edison Maciel <maciel.eds@gmail.com>
  * @file Camada do servidor responsável por gerenciamento de rotas públicas, privadas, conexão com o banco, 
  * adição de ID ao request e tratamento de erro genérico.
- * @since 
+ * @since 02/2020
  */
 
 const express = require('express');

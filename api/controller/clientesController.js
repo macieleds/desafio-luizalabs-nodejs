@@ -1,7 +1,7 @@
 /**
  * @author Edison Maciel <maciel.eds@gmail.com>
  * @file Orquestração das regras de negócio
- * @since 
+ * @since 02/2020
  */
 
 const clientesModel = require('../model/clientes');
@@ -12,9 +12,15 @@ const jwt = require('jsonwebtoken');
 module.exports = {
 
     //Cria um novo usuário
-    criar: function(req, res, next) {
+    criar: async function(req, res, next) {
 
-        clientesModel.create({ nome: req.body.nome, email: req.body.email, password: req.body.password },
+        const { email } = req.body
+
+        if (await clientesModel.findOne({ email })) {
+            return res.status(400).json({ error: 'Email Já Cadastrado' })
+        }
+
+        clientesModel.create(req.body,
             function(err, result) {
                 if (err)
                     next(err);
@@ -25,11 +31,12 @@ module.exports = {
 
     //Autentica o usuário e gera uma JSONWebToken
     autenticar: function(req, res, next) {
-        clientesModel.findOne({ email: req.body.email }, function(err, userInfo) {
+        const { email, password } = req.body;
+        clientesModel.findOne({ email }, function(err, userInfo) {
             if (err) {
                 next(err);
             } else {
-                if (bcrypt.compareSync(req.body.password, userInfo.password)) {
+                if (bcrypt.compareSync(password, userInfo.password)) {
                     const token = jwt.sign({ id: userInfo._id }, req.app.get('secretKey'), { expiresIn: '1h' });
                     res.json({ status: "success", message: "Usuário autenticado.", data: { clientes: userInfo, token: token } });
                 } else {
@@ -41,7 +48,6 @@ module.exports = {
 
     //Consulta cliente pelo ID gerado
     consultaCliente: function(req, res, next) {
-        console.log(req.body);
         clientesModel.findById(req.params.clienteId, function(err, clientesInfo) {
             if (err) {
                 next(err);
@@ -52,7 +58,7 @@ module.exports = {
     },
 
     updateById: function(req, res, next) {
-        clientesModel.findByIdAndUpdate(req.params.movieId, { nome: req.body.nome, email: req.body.email, password: req.body.password }, function(err, movieInfo) {
+        clientesModel.findByIdAndUpdate(req.params.movieId, req.body, function(err, movieInfo) {
             if (err)
                 next(err);
             else {
