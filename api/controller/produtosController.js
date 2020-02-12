@@ -43,35 +43,8 @@ module.exports = {
             products: ads.docs
         }
 
-        return res.json(retorno)
-            // produtosModel.find({}, function(err, produtos) {
-            //     if (err) {
-            //         next(err);
-            //     } else {
-            //         for (let products of produtos) {
-            //             listaProdutos.push({
-            //                 page_number: products.page_number,
-            //                 page_size: products.page_size,
-            //                 price: products.price,
-            //                 image: products.image,
-            //                 brand: products.brand,
-            //                 id: products.id,
-            //                 title: products.title
-            //             });
-            //         }
+        return res.json(retorno);
 
-        //         const ads = await produtosModel.paginate(filters, {
-        //             page: req.query.page || 1,
-        //             limit: 2,
-        //             populate: ['author'],
-        //             sort: '-createdAt'
-        //         })
-
-        //         return res.json(ads)
-        //         res.json({ status: "success", message: "Lista de Produtos Encontrada", data: { products: listaProdutos } });
-
-        //     }
-        // });
     },
 
     //Remove um produto adicionado à lista através de seu ID
