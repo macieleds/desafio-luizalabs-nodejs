@@ -23,27 +23,27 @@ Para subir a aplicação abra o prompt (cmd) ou o terminal de sua preferência, 
 <pre><code class="has-line-data" data-line-start="33" data-line-end="35" class="language-sh">localhost:<span class="hljs-number">3000</span>/clientes/cadastrar 
 </code></pre>
 <p class="has-line-data" data-line-start="35" data-line-end="36">Nessa requisição será informado, no corpo da requisição, o nome, email e senha, conforme exemplo abaixo:</p>
-<p class="has-line-data" data-line-start="37" data-line-end="38"><a href="https://nodesource.com/products/nsolid"><img src="https://i.ibb.co/crywdQs/req-Cadastro.jpg" alt="N|Solid"></a></p>
+<p class="has-line-data" data-line-start="37" data-line-end="38">[<img src="https://i.ibb.co/crywdQs/req-Cadastro.jpg" alt="N|Solid">]</p>
 <h3 class="code-line" data-line-start=39 data-line-end=40 ><a id="2__Autenticao_de_usurio_39"></a>2 - Autenticação de usuário</h3>
 <p class="has-line-data" data-line-start="41" data-line-end="42">Para criação do usuário, será feita uma requisição POST em:</p>
 <pre><code class="has-line-data" data-line-start="43" data-line-end="45" class="language-sh">localhost:<span class="hljs-number">3000</span>/clientes/autenticar
 </code></pre>
 <p class="has-line-data" data-line-start="45" data-line-end="46">Nessa requisição será informado, no corpo da requisição, o nome, email e senha <strong>cadastrados anteriormente</strong>, conforme exemplo abaixo. Essa autenticação irá gerar um token e um ID que serão utilizados posteriormente para as operações na lista de produtos.</p>
-<p class="has-line-data" data-line-start="47" data-line-end="48"><a href="https://nodesource.com/products/nsolid"><img src="https://i.ibb.co/fN3Y9G5/aut-Usuario.jpg" alt="N|Solid"></a></p>
+<p class="has-line-data" data-line-start="47" data-line-end="48">[<img src="https://i.ibb.co/fN3Y9G5/aut-Usuario.jpg" alt="N|Solid">]</p>
 <h3 class="code-line" data-line-start=49 data-line-end=50 ><a id="3__Incluso_de_produtos_na_lista_de_favoritos_49"></a>3 - Inclusão de produtos na lista de favoritos</h3>
 <p class="has-line-data" data-line-start="51" data-line-end="52">Para a inclusão de produtos, será feita uma requisição POST em:</p>
 <pre><code class="has-line-data" data-line-start="53" data-line-end="55" class="language-sh">localhost:<span class="hljs-number">3000</span>/produtos/adicionar
 </code></pre>
 <p class="has-line-data" data-line-start="55" data-line-end="56">Nessa requisição será informado, no corpo da requisição, o reviewScore (OPCIONAL), price, image, brand, id e title.</p>
-<p class="has-line-data" data-line-start="57" data-line-end="58"><a href="https://nodesource.com/products/nsolid"><img src="https://i.ibb.co/5jfjT3k/cadprod.jpg" alt="N|Solid"></a></p>
+<p class="has-line-data" data-line-start="57" data-line-end="58">[<img src="https://i.ibb.co/5jfjT3k/cadprod.jpg" alt="N|Solid">]</p>
 <h3 class="code-line" data-line-start=59 data-line-end=60 ><a id="4__Consultando_a_lista_produtos_favoritos_do_usurio_59"></a>4 - Consultando a lista produtos favoritos do usuário</h3>
 <p class="has-line-data" data-line-start="61" data-line-end="62">Para a inclusão de produtos, será feita uma requisição GET em:</p>
 <pre><code class="has-line-data" data-line-start="63" data-line-end="65" class="language-sh">localhost:<span class="hljs-number">3000</span>/produtos
 </code></pre>
 <p class="has-line-data" data-line-start="65" data-line-end="66">É importante ressaltar que essa consulta é baseada no usuário que gerou a instância, ou seja, no usuário logado e que, portanto, é necessário que seja passado o token gerado anteriormente no header, conforme exemplo abaixo:</p>
-<p class="has-line-data" data-line-start="67" data-line-end="68"><a href="https://nodesource.com/products/nsolid"><img src="https://i.ibb.co/hdt7XXR/req-Header.jpg" alt="N|Solid"></a></p>
+<p class="has-line-data" data-line-start="67" data-line-end="68">[<img src="https://i.ibb.co/hdt7XXR/req-Header.jpg" alt="N|Solid">]</p>
 <p class="has-line-data" data-line-start="69" data-line-end="70">E então a consulta será realizada:</p>
-<p class="has-line-data" data-line-start="71" data-line-end="72"><a href="https://nodesource.com/products/nsolid"><img src="https://i.ibb.co/wgCCqNH/consulta-Lista.jpg" alt="N|Solid"></a></p>
+<p class="has-line-data" data-line-start="71" data-line-end="72">[<img src="https://i.ibb.co/wgCCqNH/consulta-Lista.jpg" alt="N|Solid">]</p>
 <h3 class="code-line" data-line-start=76 data-line-end=77 ><a id="Contato_76"></a>Contato</h3>
 <p class="has-line-data" data-line-start="78" data-line-end="80">E-mail: <a href="mailto:maciel.eds@gmail.com">maciel.eds@gmail.com</a><br>
 Linkedin: <a href="https://www.linkedin.com/in/edison-maciel-6a83a14a/">https://www.linkedin.com/in/edison-maciel-6a83a14a/</a></p>
