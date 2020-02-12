@@ -3,7 +3,7 @@
 ### Sobre o desafio
                 
 
-Foi criada uma aplicação, atendendo a determinados requisitos, para avaliação no processo seletivo para o quadro de Desenvolvedores NodeJS do Luizalabs. 
+Desenvolvimento de uma API Rest para avaliação no processo seletivo para o quadro de Desenvolvedores NodeJS do Luizalabs. 
                 
 				
 ### Sobre o código da aplicação
