@@ -62,7 +62,7 @@ Para a inclusão de produtos, será feita uma requisição GET em:
 ```sh
 localhost:3000/produtos
 ```
-É importante ressaltar que essa consulta é baseada no usuário que gerou a instância, ou seja, no usuário logado e que, portanto, é necessário que seja passado o token gerado anteriormente no header, conforme exemplo abaixo:
+É importante ressaltar que essa consulta é baseada no usuário que gerou a instância, ou seja, no usuário logado e que, portanto, é necessário que seja passado o token gerado anteriormente ao header, conforme exemplo abaixo:
 
 ![N|Solid](https://i.ibb.co/hdt7XXR/req-Header.jpg)
 
