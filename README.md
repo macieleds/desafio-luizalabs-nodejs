@@ -36,13 +36,20 @@ Para subir a aplicação abra o prompt (cmd) ou o terminal de sua preferência, 
 </code></pre>
 <p class="has-line-data" data-line-start="55" data-line-end="56">Nessa requisição será passado o _id gerado na autenticação do usuário.</p>
 <p class="has-line-data" data-line-start="57" data-line-end="58"><img src="https://i.ibb.co/t48L66G/cons-Usuario.jpg" alt="N|Solid"></p>
-<h3 class="code-line" data-line-start=59 data-line-end=60 ><a id="4__Incluso_de_produtos_na_lista_de_favoritos_59"></a>4 - Inclusão de produtos na lista de favoritos</h3>
+<h3 class="code-line" data-line-start=59 data-line-end=60 ><a id="4__Alterao_de_dados_do_usurio_59"></a>4 - Alteração de dados do usuário</h3>
+<p class="has-line-data" data-line-start="61" data-line-end="62">Para a realização da alteração de dados do usuário, será feita uma requisição PUT em:</p>
+<pre><code class="has-line-data" data-line-start="63" data-line-end="65" class="language-sh">localhost:<span class="hljs-number">3000</span>/clientes/{_id}
+</code></pre>
+<p class="has-line-data" data-line-start="65" data-line-end="67">Nessa requisição será passado o _id gerado na autenticação do usuário.<br>
+No corpo da requisição deverão ser passados os atributos nome, email e password e, em seus campos, os novos valores.</p>
+<p class="has-line-data" data-line-start="69" data-line-end="70"><img src="https://i.ibb.co/LhfjBJT/alt-Usuario.jpg" alt="N|Solid"></p>
+<h3 class="code-line" data-line-start=59 data-line-end=60 ><a id="4__Incluso_de_produtos_na_lista_de_favoritos_59"></a>5 - Inclusão de produtos na lista de favoritos</h3>
 <p class="has-line-data" data-line-start="61" data-line-end="62">Para a inclusão de produtos, será feita uma requisição POST em:</p>
 <pre><code class="has-line-data" data-line-start="63" data-line-end="65" class="language-sh">localhost:<span class="hljs-number">3000</span>/produtos/adicionar
 </code></pre>
 <p class="has-line-data" data-line-start="65" data-line-end="66">Nessa requisição serão informados, no corpo da requisição, o reviewScore (OPCIONAL), price, image, brand, id e title.</p>
 <p class="has-line-data" data-line-start="67" data-line-end="68"><img src="https://i.ibb.co/5jfjT3k/cadprod.jpg" alt="N|Solid"></p>
-<h3 class="code-line" data-line-start=69 data-line-end=70 ><a id="5__Consultando_a_lista_produtos_favoritos_do_usurio_69"></a>5 - Consultando a lista produtos favoritos do usuário</h3>
+<h3 class="code-line" data-line-start=69 data-line-end=70 ><a id="5__Consultando_a_lista_produtos_favoritos_do_usurio_69"></a>6 - Consultando a lista produtos favoritos do usuário</h3>
 <p class="has-line-data" data-line-start="71" data-line-end="72">Para a inclusão de produtos, será feita uma requisição GET em:</p>
 <pre><code class="has-line-data" data-line-start="73" data-line-end="75" class="language-sh">localhost:<span class="hljs-number">3000</span>/produtos
 </code></pre>
