@@ -52,7 +52,7 @@ Para a inclusão de produtos, será feita uma requisição POST em:
 ```sh
 localhost:3000/produtos/adicionar
 ```
-Nessa requisição será informado, no corpo da requisição, o reviewScore (OPCIONAL), price, image, brand, id e title.
+Nessa requisição serão informados, no corpo da requisição, o reviewScore (OPCIONAL), price, image, brand, id e title.
 
 ![N|Solid](https://i.ibb.co/5jfjT3k/cadprod.jpg)
 
