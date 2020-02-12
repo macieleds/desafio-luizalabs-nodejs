@@ -14,7 +14,7 @@ module.exports = {
         const { id } = req.body
 
         if (await produtosModel.findOne({ id })) {
-            return res.status(400).json({ error: 'Produto Já Cadastrado' })
+            return res.status(400).json({ error: 'Produto já adicionado' })
         }
         produtosModel.create(req.body,
             function(err, result) {
@@ -28,28 +28,22 @@ module.exports = {
 
     //Retorna a lista dos produtos cadastrados
     getAll: async function(req, res, next) {
-        const myCustomLabels = {
-            totalDocs: 'itemCount',
-            docs: 'itemsList',
-            limit: 'perPage',
-            page: 'currentPage',
-            nextPage: 'next',
-            prevPage: 'prev',
-            totalPages: 'pageCount',
-            pagingCounter: 'slNo',
-            meta: 'paginator'
-        };
-
         const options = {
-            page: 1,
-            limit: 10,
-            customLabels: myCustomLabels
+            page: req.query.page,
+            limit: 100
         };
-
 
         const ads = await produtosModel.paginate({}, options)
 
-        return res.json(ads)
+        const retorno = {
+            meta: {
+                page_number: ads.page,
+                page_size: ads.docs.length
+            },
+            products: ads.docs
+        }
+
+        return res.json(retorno)
             // produtosModel.find({}, function(err, produtos) {
             //     if (err) {
             //         next(err);

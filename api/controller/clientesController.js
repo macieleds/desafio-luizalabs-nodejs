@@ -57,8 +57,9 @@ module.exports = {
         });
     },
 
+    //Altera dados do cliente pelo ID gerado
     updateById: function(req, res, next) {
-        clientesModel.findByIdAndUpdate(req.params.movieId, req.body, function(err, movieInfo) {
+        clientesModel.findByIdAndUpdate(req.params.clienteId, req.body, function(err, clientesInfo) {
             if (err)
                 next(err);
             else {
@@ -69,7 +70,7 @@ module.exports = {
 
     //Remove um cliente 
     removeCliente: function(req, res, next) {
-        clientesModel.removeCliente(req.params.email, function(err, userInfo) {
+        clientesModel.removeCliente(req.params.clienteId, function(err, userInfo) {
             if (err)
                 next(err);
             else {
