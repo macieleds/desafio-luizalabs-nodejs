@@ -28,7 +28,7 @@ Para subir a aplicação abra o prompt (cmd) ou o terminal de sua preferência, 
 <p class="has-line-data" data-line-start="41" data-line-end="42">Para criação do usuário, será feita uma requisição POST em:</p>
 <pre><code class="has-line-data" data-line-start="43" data-line-end="45" class="language-sh">localhost:<span class="hljs-number">3000</span>/clientes/autenticar
 </code></pre>
-<p class="has-line-data" data-line-start="45" data-line-end="46">Nessa requisição serão informados, no corpo da requisição, o nome, email e senha <strong>cadastrados anteriormente</strong>, conforme exemplo abaixo. o password será criptografado e serão gerados  um token e um ID que serão utilizados posteriormente para as operações de consulta e exclusão de usuário e na lista de produtos.</p>
+<p class="has-line-data" data-line-start="45" data-line-end="46">Nessa requisição serão informados, no corpo da requisição, o nome, email e senha <strong>cadastrados anteriormente</strong>, conforme exemplo abaixo. O password será criptografado e serão gerados um token e um ID que serão utilizados posteriormente para as operações de consulta e exclusão de usuário e na lista de produtos.</p>
 <p class="has-line-data" data-line-start="47" data-line-end="48"><img src="https://i.ibb.co/fN3Y9G5/aut-Usuario.jpg" alt="N|Solid"></p>
 <h3 class="code-line" data-line-start=49 data-line-end=50 ><a id="3__Consulta_de_usurio_49"></a>3 - Consulta de usuário</h3>
 <p class="has-line-data" data-line-start="51" data-line-end="52">Para a realização da consulta do usuário, será feita uma requisição GET em:</p>
