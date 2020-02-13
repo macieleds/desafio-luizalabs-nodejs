@@ -12,6 +12,7 @@
 <li class="has-line-data" data-line-start="19" data-line-end="20">JWT - JSON Web Token (para gerar token de autenticação)</li>
 <li class="has-line-data" data-line-start="20" data-line-end="21">body-parser (conversão do body da requisição para o formato JSON)</li>
 <li class="has-line-data" data-line-start="21" data-line-end="23">Morgan (para exibição das requisições no servidor HTTP)</li>
+<li class="has-line-data" data-line-start="22" data-line-end="25">Mongoose-paginate-v2 (para paginação)</li>
 </ul>
 
 Para rodar a API, baixe e instale as dependências do projeto com o comando npm install.
