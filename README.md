@@ -69,6 +69,17 @@ No corpo da requisição deverão ser passados os atributos nome, email e passwo
 <p class="has-line-data" data-line-start="77" data-line-end="78"><img src="https://i.ibb.co/hdt7XXR/req-Header.jpg" alt="N|Solid"></p>
 <p class="has-line-data" data-line-start="79" data-line-end="80">E então a consulta será realizada:</p>
 <p class="has-line-data" data-line-start="81" data-line-end="82"><img src="https://i.ibb.co/wgCCqNH/consulta-Lista.jpg" alt="N|Solid"></p>
+
+<p class="has-line-data" data-line-start="95" data-line-end="96">Para paginar:</p>
+<pre><code class="has-line-data" data-line-start="97" data-line-end="99" class="language-sh">localhost:<span class="hljs-number">3000</span>/produtos?page=&lt;número da página&gt;
+</code></pre>
+<p class="has-line-data" data-line-start="100" data-line-end="101"><img src="https://i.ibb.co/kmQSKxX/pag-Produtos.jpg" alt="N|Solid"></p>
 <h3 class="code-line" data-line-start=86 data-line-end=87 ><a id="Contato_86"></a>Contato</h3>
 <p class="has-line-data" data-line-start="88" data-line-end="90">E-mail: <a href="mailto:maciel.eds@gmail.com">maciel.eds@gmail.com</a><br>
 Linkedin: <a href="https://www.linkedin.com/in/edison-maciel-6a83a14a/">https://www.linkedin.com/in/edison-maciel-6a83a14a/</a></p>
+
+
+
+
+
+
