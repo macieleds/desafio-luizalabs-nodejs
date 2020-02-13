@@ -4,7 +4,7 @@ const clientesController = require('../controller/clientesController');
 router.post('/cadastrar', clientesController.criar);
 router.post('/autenticar', clientesController.autenticar);
 router.get('/:clienteId', clientesController.consultaCliente);
-router.put('/:clienteId', clientesController.updateById);
-router.delete('/clienteId', clientesController.removeCliente);
+router.put('/:clienteId', clientesController.alteraDados);
+router.delete('/:clienteId', clientesController.removeCliente);
 
 module.exports = router;

@@ -17,7 +17,7 @@ module.exports = {
         const { email } = req.body
 
         if (await clientesModel.findOne({ email })) {
-            return res.status(400).json({ error: 'Email Já Cadastrado' })
+            return res.status(400).json({ error: 'Email já cadastrado' })
         }
 
         clientesModel.create(req.body,
@@ -58,7 +58,7 @@ module.exports = {
     },
 
     //Altera dados do cliente pelo ID gerado
-    updateById: function(req, res, next) {
+    alteraDados: function(req, res, next) {
         clientesModel.findByIdAndUpdate(req.params.clienteId, req.body, function(err, clientesInfo) {
             if (err)
                 next(err);
@@ -68,13 +68,13 @@ module.exports = {
         });
     },
 
-    //Remove um cliente 
+    //Remove um cliente pelo ID gerado
     removeCliente: function(req, res, next) {
-        clientesModel.removeCliente(req.params.clienteId, function(err, userInfo) {
+        clientesModel.findByIdAndDelete(req.params.clienteId, function(err, userInfo) {
             if (err)
                 next(err);
             else {
-                res.json({ status: "success", message: "Cliente excluído com sucesso.", data: null });
+                res.json({ status: "success", message: "Usuário excluído com sucesso.", data: null });
             }
         });
     },

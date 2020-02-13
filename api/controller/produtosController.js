@@ -27,10 +27,10 @@ module.exports = {
     },
 
     //Retorna a lista dos produtos cadastrados
-    getAll: async function(req, res, next) {
+    consultaLista: async function(req, res, next) {
         const options = {
             page: req.query.page,
-            limit: 100
+            limit: 10
         };
 
         const ads = await produtosModel.paginate({}, options)
@@ -48,7 +48,7 @@ module.exports = {
     },
 
     //Remove um produto adicionado à lista através de seu ID
-    deleteById: function(req, res, next) {
+    removeProduto: function(req, res, next) {
         produtosModel.findByIdAndRemove(req.params.id, function(err, produtosInfo) {
             if (err)
                 next(err);
