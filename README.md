@@ -65,8 +65,8 @@ No corpo da requisição deverão ser passados os atributos nome, email e passwo
 </code></pre>
 <p class="has-line-data" data-line-start="65" data-line-end="66">Nessa requisição serão informados, no corpo da requisição, o reviewScore (OPCIONAL), price, image, brand, id e title.</p>
 <p class="has-line-data" data-line-start="67" data-line-end="68"><img src="https://i.ibb.co/5jfjT3k/cadprod.jpg" alt="N|Solid"></p>
-<h3 class="code-line" data-line-start=69 data-line-end=70 ><a id="5__Consultando_a_lista_produtos_favoritos_do_usurio_69"></a>7 - Consultando a lista produtos favoritos do usuário</h3>
-<p class="has-line-data" data-line-start="71" data-line-end="72">Para a inclusão de produtos, será feita uma requisição GET em:</p>
+<h3 class="code-line" data-line-start=69 data-line-end=70 ><a id="5__Consultando_a_lista_produtos_favoritos_do_usurio_69"></a>7 - Consultando a lista de produtos favoritos do usuário</h3>
+<p class="has-line-data" data-line-start="71" data-line-end="72">Para a consulta de produtos, será feita uma requisição GET em:</p>
 <pre><code class="has-line-data" data-line-start="73" data-line-end="75" class="language-sh">localhost:<span class="hljs-number">3000</span>/produtos
 </code></pre>
 <p class="has-line-data" data-line-start="75" data-line-end="76">É importante ressaltar que essa consulta é baseada no usuário que gerou a instância, ou seja, no usuário logado e que, portanto, é necessário que seja passado o token gerado anteriormente no header, conforme exemplo abaixo:</p>
