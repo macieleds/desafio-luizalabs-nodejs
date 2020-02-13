@@ -13,6 +13,10 @@
 <li class="has-line-data" data-line-start="20" data-line-end="21">body-parser (conversão do body da requisição para o formato JSON)</li>
 <li class="has-line-data" data-line-start="21" data-line-end="23">Morgan (para exibição das requisições no servidor HTTP)</li>
 </ul>
+
+Para rodar a API, baixe e instale as dependências do projeto com o comando npm install.
+
+
 <h1 class="code-line" data-line-start=23 data-line-end=24 ><a id="Funcionalidades_23"></a>Funcionalidades</h1>
 <p class="has-line-data" data-line-start="25" data-line-end="28">A API permite que o usuário faça um CRUD de cadastro de clientes e adicione, consulte e exclua produtos em sua lista de favoritos em sua instância. As operações de produtos favoritos é protegida por autenticação. Logo, é necessário que o usuário crie uma conta e faça a autenticação para realizar essas operações.<br>
 Esse tutorial orienta sobre as funcionalidades da API utilizando o Postman.<br>
