@@ -42,13 +42,26 @@ Para subir a aplicação abra o prompt (cmd) ou o terminal de sua preferência, 
 <p class="has-line-data" data-line-start="65" data-line-end="67">Nessa requisição será passado o _id gerado na autenticação do usuário.<br>
 No corpo da requisição deverão ser passados os atributos nome, email e password e, em seus campos, os novos valores.</p>
 <p class="has-line-data" data-line-start="69" data-line-end="70"><img src="https://i.ibb.co/LhfjBJT/alt-Usuario.jpg" alt="N|Solid"></p>
-<h3 class="code-line" data-line-start=59 data-line-end=60 ><a id="4__Incluso_de_produtos_na_lista_de_favoritos_59"></a>5 - Inclusão de produtos na lista de favoritos</h3>
+
+<h3 class="code-line" data-line-start=29 data-line-end=30 ><a id="1__Exclusao_de_usurio_29"></a>5 - Exclusão de usuário</h3>
+<p class="has-line-data" data-line-start="31" data-line-end="32">Para exclusão do usuário, será feita uma requisição DELETE em:</p>
+<pre><code class="has-line-data" data-line-start="33" data-line-end="35" class="language-sh">localhost:<span class="hljs-number">3000</span>/clientes/{_id}
+</code></pre>
+<p class="has-line-data" data-line-start="35" data-line-end="36">Nessa requisição será informado o ID de instância do usuário, conforme exemplo abaixo:</p>
+<p class="has-line-data" data-line-start="37" data-line-end="38"><img src="https://i.ibb.co/nw0yJKQ/del-Usuario.jpg" alt="N|Solid"></p>
+
+
+
+
+
+
+<h3 class="code-line" data-line-start=59 data-line-end=60 ><a id="4__Incluso_de_produtos_na_lista_de_favoritos_59"></a>6 - Inclusão de produtos na lista de favoritos</h3>
 <p class="has-line-data" data-line-start="61" data-line-end="62">Para a inclusão de produtos, será feita uma requisição POST em:</p>
 <pre><code class="has-line-data" data-line-start="63" data-line-end="65" class="language-sh">localhost:<span class="hljs-number">3000</span>/produtos/adicionar
 </code></pre>
 <p class="has-line-data" data-line-start="65" data-line-end="66">Nessa requisição serão informados, no corpo da requisição, o reviewScore (OPCIONAL), price, image, brand, id e title.</p>
 <p class="has-line-data" data-line-start="67" data-line-end="68"><img src="https://i.ibb.co/5jfjT3k/cadprod.jpg" alt="N|Solid"></p>
-<h3 class="code-line" data-line-start=69 data-line-end=70 ><a id="5__Consultando_a_lista_produtos_favoritos_do_usurio_69"></a>6 - Consultando a lista produtos favoritos do usuário</h3>
+<h3 class="code-line" data-line-start=69 data-line-end=70 ><a id="5__Consultando_a_lista_produtos_favoritos_do_usurio_69"></a>7 - Consultando a lista produtos favoritos do usuário</h3>
 <p class="has-line-data" data-line-start="71" data-line-end="72">Para a inclusão de produtos, será feita uma requisição GET em:</p>
 <pre><code class="has-line-data" data-line-start="73" data-line-end="75" class="language-sh">localhost:<span class="hljs-number">3000</span>/produtos
 </code></pre>
