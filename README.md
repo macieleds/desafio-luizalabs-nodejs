@@ -74,6 +74,14 @@ No corpo da requisição deverão ser passados os atributos nome, email e passwo
 <pre><code class="has-line-data" data-line-start="97" data-line-end="99" class="language-sh">localhost:<span class="hljs-number">3000</span>/produtos?page=&lt;número da página&gt;
 </code></pre>
 <p class="has-line-data" data-line-start="100" data-line-end="101"><img src="https://i.ibb.co/kmQSKxX/pag-Produtos.jpg" alt="N|Solid"></p>
+
+<h3 class="code-line" data-line-start=103 data-line-end=104 ><a id="8__Excluindo_produtos_da_lista_de_favoritos_103"></a>8 - Excluindo produtos da lista de favoritos</h3>
+<p class="has-line-data" data-line-start="105" data-line-end="106">Para a exclusão de produtos, será feita uma requisição DELETE em:</p>
+<pre><code class="has-line-data" data-line-start="107" data-line-end="109" class="language-sh">localhost:<span class="hljs-number">3000</span>/produtos/{id}
+</code></pre>
+<p class="has-line-data" data-line-start="109" data-line-end="110">Para a exclusão de um produto da lista de favoritos, será informado o <strong>id do produto</strong> (e não o ID gerado na instância).</p>
+<p class="has-line-data" data-line-start="111" data-line-end="112"><img src="https://i.ibb.co/FzQNnwq/excl-Produtos.jpg" alt="N|Solid"></p>
+
 <h3 class="code-line" data-line-start=86 data-line-end=87 ><a id="Contato_86"></a>Contato</h3>
 <p class="has-line-data" data-line-start="88" data-line-end="90">E-mail: <a href="mailto:maciel.eds@gmail.com">maciel.eds@gmail.com</a><br>
 Linkedin: <a href="https://www.linkedin.com/in/edison-maciel-6a83a14a/">https://www.linkedin.com/in/edison-maciel-6a83a14a/</a></p>
