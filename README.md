@@ -8,7 +8,6 @@
 <li class="has-line-data" data-line-start="14" data-line-end="15">NodeJS</li>
 <li class="has-line-data" data-line-start="15" data-line-end="16">Express</li>
 <li class="has-line-data" data-line-start="16" data-line-end="17">Mongoose (MongoDB)</li>
-<li class="has-line-data" data-line-start="17" data-line-end="18">NodeJS</li>
 <li class="has-line-data" data-line-start="18" data-line-end="19">npm - bcrypt (para criptografia de senha)</li>
 <li class="has-line-data" data-line-start="19" data-line-end="20">JWT - JSON Web Token (para gerar token de autenticação)</li>
 <li class="has-line-data" data-line-start="20" data-line-end="21">body-parser (conversão do body da requisição para o formato JSON)</li>
