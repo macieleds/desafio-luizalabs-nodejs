@@ -19,7 +19,7 @@ Para rodar a API, baixe e instale as dependências do projeto com o comando npm 
 
 
 <h1 class="code-line" data-line-start=23 data-line-end=24 ><a id="Funcionalidades_23"></a>Funcionalidades</h1>
-<p class="has-line-data" data-line-start="25" data-line-end="28">A API permite que o usuário faça um CRUD de cadastro de clientes e adicione, consulte e exclua produtos em sua lista de favoritos em sua instância. As operações de produtos favoritos é protegida por autenticação. Logo, é necessário que o usuário crie uma conta e faça a autenticação para realizar essas operações.<br>
+<p class="has-line-data" data-line-start="25" data-line-end="28">A API permite que o usuário faça um CRUD de cadastro de clientes e adicione, consulte e exclua produtos em sua lista de favoritos em sua instância. As operações de produtos favoritos são protegidas por autenticação. Logo, é necessário que o usuário crie uma conta e faça a autenticação para realizar essas operações.<br>
 Esse tutorial orienta sobre as funcionalidades da API utilizando o Postman.<br>
 Para subir a aplicação abra o prompt (cmd) ou o terminal de sua preferência, aponte para a pasta onde o projeto está e execute o comando <strong>"nodemon server.js"</strong> (sem as aspas).</p>
 <h3 class="code-line" data-line-start=29 data-line-end=30 ><a id="1__Criao_de_usurio_29"></a>1 - Criação de usuário</h3>
