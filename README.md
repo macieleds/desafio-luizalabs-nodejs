@@ -84,7 +84,7 @@ No corpo da requisição deverão ser passados os atributos nome, email e passwo
 <p class="has-line-data" data-line-start="105" data-line-end="106">Para a exclusão de produtos, será feita uma requisição DELETE em:</p>
 <pre><code class="has-line-data" data-line-start="107" data-line-end="109" class="language-sh">localhost:<span class="hljs-number">3000</span>/produtos/{id}
 </code></pre>
-<p class="has-line-data" data-line-start="109" data-line-end="110">Para a exclusão de um produto da lista de favoritos, será informado o <strong>id do produto</strong> (e não o ID gerado na instância).</p>
+<p class="has-line-data" data-line-start="109" data-line-end="110">Para a exclusão de um produto da lista de favoritos, será informado o <strong>id do produto</strong>.</p>
 <p class="has-line-data" data-line-start="111" data-line-end="112"><img src="https://i.ibb.co/FzQNnwq/excl-Produtos.jpg" alt="N|Solid"></p>
 
 <h3 class="code-line" data-line-start=86 data-line-end=87 ><a id="Contato_86"></a>Contato</h3>
